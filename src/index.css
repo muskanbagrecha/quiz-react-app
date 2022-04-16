@@ -8,7 +8,13 @@ body,
 html {
     scroll-behavior: smooth;
     letter-spacing: 0.25px;
+    margin: 0;
+    padding: 0;
     /* font-family: 'Roboto', sans-serif; */
+}
+
+:root{
+
 }
 
 body::-webkit-scrollbar,
@@ -21,7 +27,7 @@ body::-webkit-scrollbar,
 body::-webkit-scrollbar-thumb,
 .side-container::-webkit-scrollbar-thumb,
 .playlist-item-container::-webkit-scrollbar-thumb {
-    background-color: var(--transparent-primary);
+    background-color: rgba(var(--color-primary-values), 0.5);   ;
 }
 
 .main-container {
