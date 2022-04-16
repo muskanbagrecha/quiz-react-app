@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { category1 } from "../../assets/Images";
+import { category1, category3 } from "../../assets/Images";
 
 /**
  * Category Database can be added here.
@@ -23,7 +23,7 @@ export const categories = [
   {
     _id: uuid(),
     categoryName: "Technology",
-    categoryImage: category1,
+    categoryImage: category3,
     categoryDescription: "Quizes based on technology",
   },
 ];

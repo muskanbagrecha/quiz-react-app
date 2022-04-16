@@ -1,6 +1,5 @@
 import { Card } from "../../../../components/UI/card/Card";
 export const CategoryItem = ({ category }) => {
-  console.log(category);
   const { categoryImage, categoryName, categoryDescription } = category;
 
   return (
