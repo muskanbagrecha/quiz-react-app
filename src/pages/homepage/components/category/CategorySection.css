@@ -57,7 +57,7 @@
 
 .card-category .card__img img{
     height: 14rem;
-    background: white;
+    background: var(--white);
 }
 
 @media screen and (max-width: 1265px) {

@@ -78,12 +78,13 @@ nav {
     .navigation{
         position: relative;
     }
-    .searchbar{
+    .searchbar {
         position: absolute;
         top: 5.25rem;
-        left: 50%;
+        left: 49%;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
-        width: 100%;
+        width: 95%;
     }
     .searchbar input{
         width: 100%;
