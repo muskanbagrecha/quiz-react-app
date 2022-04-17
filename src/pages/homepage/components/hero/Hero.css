@@ -1,0 +1,29 @@
+.hero {
+    margin-top: 3rem;
+    height: 20vh;
+    min-height: 15rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: url("../../../../assets/Images/hero/hero.webp") no-repeat center center;
+}
+
+.hero .btn{
+    border: 2px solid transparent;
+}
+
+.hero .btn:hover {
+    color: var(--color-light);
+    background: transparent;
+    border: 2px solid var(--color-dark);
+}
+
+@media screen and (max-width: 768px) {
+    .hero .large-title {
+        font-size: 2.5rem;
+    }
+}
+
