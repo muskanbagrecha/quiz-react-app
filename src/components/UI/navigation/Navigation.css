@@ -70,7 +70,12 @@ nav {
         border: none;
         font-weight: 500;
         font-size: 1.25rem;
+        background: transparent;
     }    
+    .nav__list--static button:hover{
+        color: var(--color-primary);
+        background: transparent;
+    }
 }
 
 
