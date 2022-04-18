@@ -58,6 +58,10 @@ nav {
     background-color: var(--color-primary);
 }
 
+.navigation ul .btn-icon{
+    margin: 0 10px;
+}
+
 @media screen and (max-width: 420px) {
     .nav__list--static{
         gap: 0;

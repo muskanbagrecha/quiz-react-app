@@ -1,6 +1,8 @@
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Navigation.css";
 import logo from "../../../assets/logo.png";
+import { User, Moon, Sun } from "../../../assets/icons/Icons";
+
 export const Navigation = () => {
   const navigate = useNavigate();
 
@@ -17,7 +19,7 @@ export const Navigation = () => {
       </form>
 
       <ul className="no-list-style nav__list--static">
-        <li>
+        {/* <li>
           <button
             className="btn btn-transparent-black-br"
             onClick={() => navigate("/")}
@@ -29,6 +31,12 @@ export const Navigation = () => {
           <button className="theme-toggle btn btn-transparent-black-br">
             Theme
           </button>
+        </li> */}
+        <li class="btn-icon">
+          <User />
+        </li>
+        <li class="btn-icon">
+          <Moon />
         </li>
       </ul>
     </nav>

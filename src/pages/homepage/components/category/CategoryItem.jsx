@@ -8,18 +8,17 @@ export const CategoryItem = ({ category }) => {
     categoryDescription,
   } = category;
   const navigate = useNavigate();
+
   return (
     <div className="card-category-wrapper">
-      <div className="card__description">
+      <div
+        className="card__description"
+        onClick={() => {
+          navigate("/rules/" + categoryId);
+        }}
+      >
         <p>{categoryDescription}</p>
-        <button
-          className="btn btn-black-no-br"
-          onClick={() => {
-            navigate("/rules/" + categoryId);
-          }}
-        >
-          Explore
-        </button>
+        <button className="btn btn-black-no-br">Explore</button>
       </div>
       <Card className="card-vertical card-category">
         <div className="card__img">
