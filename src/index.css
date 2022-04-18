@@ -4,14 +4,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css%22");
 @import url(https://unpkg.com/mockman-js@latest/dist/style.css);
 
-body,
-html {
-    scroll-behavior: smooth;
-    letter-spacing: 0.25px;
-    margin: 0;
-    padding: 0;
-}
-
 :root{
     --white: #fff;
     --black: #000;
@@ -78,6 +70,15 @@ body::-webkit-scrollbar-thumb,
     background-color: rgba(var(--color-primary-values), 0.5);   ;
 }
 
+body,
+html {
+    scroll-behavior: smooth;
+    letter-spacing: 0.25px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-current);
+}
+
 .main-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -138,3 +139,4 @@ footer {
     justify-content: center;
     align-items: center;
 }
+

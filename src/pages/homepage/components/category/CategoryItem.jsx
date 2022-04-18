@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import { Card } from "../../../../components/UI/card/Card";
 export const CategoryItem = ({ category }) => {
   const {
-    _id: categoryId,
     categoryImage,
     categoryName,
     categoryDescription,
@@ -14,7 +13,7 @@ export const CategoryItem = ({ category }) => {
       <div
         className="card__description"
         onClick={() => {
-          navigate("/rules/" + categoryId);
+          navigate("/quizzes/" + categoryName);
         }}
       >
         <p>{categoryDescription}</p>

@@ -2,8 +2,8 @@ import { Response } from "miragejs";
 import { requiresAuth } from "../utils/authUtils";
 import { v4 as uuid } from "uuid";
 
-export const getAllQuizesHandler = function () {
-  return new Response(200, {}, { quizes: this.db.quizzes });
+export const getAllQuizzesHandler = function () {
+  return new Response(200, {}, { quizzes: this.db.quizzes });
 };
 
 export const getSingleQuizHandler = function (schema, request) {

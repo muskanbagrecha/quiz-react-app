@@ -10,11 +10,11 @@ import {
 } from "./backend/controllers/CategoryController";
 import {
   addQuizHandler,
-  getAllQuizesHandler,
+  getAllQuizzesHandler,
   getSingleQuizHandler,
   getSingleQuizQuestionAnswer,
   postQuizResultHandler,
-} from "./backend/controllers/QuizesController";
+} from "./backend/controllers/QuizzesController";
 
 import { categories } from "./backend/db/categories";
 import { quizzes } from "./backend/db/quizzes";
@@ -65,8 +65,8 @@ export function makeServer({ environment = "development" } = {}) {
       //check token (private)
       this.post("/auth/checktoken", checkToken.bind(this));
 
-      // quizes routes (public)
-      this.get("/quizzes", getAllQuizesHandler.bind(this));
+      // quizzes routes (public)
+      this.get("/quizzes", getAllQuizzesHandler.bind(this));
       this.get("/quizzes/:quizId", getSingleQuizHandler.bind(this));
       this.get(
         "/quizzes/:quizId/:questionId",
@@ -77,7 +77,7 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/categories", getAllCategoriesHandler.bind(this));
       this.get("/categories/:categoryId", getCategoryHandler.bind(this));
 
-      // quizes routes (private)
+      // quizzes routes (private)
       this.post("/quizzes", addQuizHandler.bind(this));
       this.post("/quizzes/result", postQuizResultHandler.bind(this));
     },
