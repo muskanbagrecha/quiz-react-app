@@ -1,0 +1,12 @@
+.quiz__results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 40rem;
+}
+
+.quiz__options{
+    width: 100%;
+}

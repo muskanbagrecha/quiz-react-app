@@ -1,0 +1,11 @@
+.time-label {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+}
+
+.question-number-label{
+    display: flex;
+    justify-content: center;
+}
+

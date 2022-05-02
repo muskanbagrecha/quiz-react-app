@@ -1,0 +1,95 @@
+.login-container, .signup-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.loader{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container{
+    height: 32rem;
+}
+
+.signup-container{
+    margin: 5rem 0;
+    height: 40rem;
+}
+
+.login-container h3, .signup-container h3{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-container .input-form{
+    width: 50%;
+    max-width: 28rem;
+    min-width: 20rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--container-box-shadow);
+    padding: 2rem;
+    border: 2px solid var(--color-primary);
+}
+
+.input-form > *{
+    margin: 0;
+}
+
+.login__CTA, .signup__CTA{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 5px;
+}
+
+.login__CTA :nth-child(1), .signup__CTA :nth-child(1){
+    width: 100%;
+}
+
+.input-form .btn{
+    align-self: center;
+    font-size: 1.25rem;
+    padding: 7px 1rem;
+}
+
+.input-form > *:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.signup-container .input-form{
+    width: 50%;
+    max-width: 28rem;
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--container-box-shadow);
+    padding: 2rem;
+    border: 2px solid var(--color-primary);
+}
+.error-message{
+    text-align: center;
+}
+input.password-input + span{
+    margin-left: -2rem;
+    cursor: pointer;
+  }
+
+.login-container.login-modal{
+    margin: 0;
+}

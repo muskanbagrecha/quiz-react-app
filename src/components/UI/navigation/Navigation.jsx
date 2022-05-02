@@ -1,12 +1,18 @@
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate, NavLink, Link } from "react-router-dom";
 import "./Navigation.css";
 import logo from "../../../assets/logo.png";
 import { User, Moon, Sun } from "../../../assets/icons/Icons";
-import { useTheme } from "../../../context/";
+import { useTheme, useAuth } from "../../../hooks/";
 
 export const Navigation = () => {
   const navigate = useNavigate();
   const { toggleTheme, theme } = useTheme();
+
+  const {
+    authState: { isAuthenticated, user },
+    logoutHandler,
+  } = useAuth();
+
   return (
     <nav className="navigation">
       <NavLink to="/">
@@ -20,21 +26,39 @@ export const Navigation = () => {
       </form>
 
       <ul className="no-list-style nav__list--static">
-        {/* <li>
-          <button
-            className="btn btn-transparent-black-br"
-            onClick={() => navigate("/")}
-          >
-            Login
-          </button>
-        </li>
-        <li>
-          <button className="theme-toggle btn btn-transparent-black-br">
-            Theme
-          </button>
-        </li> */}
-        <li className="btn-icon">
-          <User />
+        <li className="btn-icon user-icon">
+          {!isAuthenticated ? (
+            <span onClick={() => navigate("/login")}>
+              <User />
+            </span>
+          ) : (
+            <span className="avatar avatar-xs avatar-text">
+              {user?.firstName[0] + user?.lastName[0]}
+            </span>
+          )}
+          <nav className="user--hover">
+            {isAuthenticated ? (
+              <div>
+                <Link to="/user">Welcome, {user?.firstName}</Link>
+                <hr />
+                <Link to="/cart">Cart</Link>
+                <br />
+                <Link to="/wishlist">Wishlist</Link>
+                <hr />
+                <button className="btn-link-text" onClick={logoutHandler}>
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div>
+                <p>Welcome,</p>
+                <small>To access account</small>
+                <Link to="/login" className="btn-link-text">
+                  Login/Signup
+                </Link>
+              </div>
+            )}
+          </nav>
         </li>
         <li className="btn-icon" onClick={toggleTheme}>
           {theme === "light" ? <Moon /> : <Sun />}

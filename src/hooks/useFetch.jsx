@@ -9,11 +9,11 @@ export const useFetch = () => {
     try {
       setLoading(true);
       setError(null);
-      const res = await axios.request(params);
+      const res = await axios(params);
       setData(res?.data);
     } catch (error) {
-      console.log(error);
-      setError(error);
+      console.log(error.response);
+      setError(error.response);
     } finally {
       setLoading(false);
     }
