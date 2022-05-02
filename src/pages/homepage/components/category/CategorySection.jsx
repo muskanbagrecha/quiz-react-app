@@ -5,7 +5,7 @@ import "./CategorySection.css";
 import spinner from "../../../../assets/spinner.svg";
 
 export const CategorySection = () => {
-  const { data, loading, error, serverCall: fetchCategories } = useFetch();
+  const { data, loading, serverCall: fetchCategories } = useFetch();
 
   useEffect(() => {
     fetchCategories({

@@ -63,7 +63,7 @@ this structure needed to be followed in the exact way only to get all the APIs w
 ```
 
 
-### Get All quizes
+### Get All quizzes
 * API Route : '/api/quizzes'
 * Type : 'GET'
 * Request Headers : 'Default'

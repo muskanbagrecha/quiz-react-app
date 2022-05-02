@@ -1,9 +1,12 @@
 import { useNavigate, NavLink } from "react-router-dom";
 import "./Navigation.css";
 import logo from "../../../assets/logo.png";
+import { User, Moon, Sun } from "../../../assets/icons/Icons";
+import { useTheme } from "../../../context/";
+
 export const Navigation = () => {
   const navigate = useNavigate();
-
+  const { toggleTheme, theme } = useTheme();
   return (
     <nav className="navigation">
       <NavLink to="/">
@@ -17,7 +20,7 @@ export const Navigation = () => {
       </form>
 
       <ul className="no-list-style nav__list--static">
-        <li>
+        {/* <li>
           <button
             className="btn btn-transparent-black-br"
             onClick={() => navigate("/")}
@@ -29,6 +32,12 @@ export const Navigation = () => {
           <button className="theme-toggle btn btn-transparent-black-br">
             Theme
           </button>
+        </li> */}
+        <li className="btn-icon">
+          <User />
+        </li>
+        <li className="btn-icon" onClick={toggleTheme}>
+          {theme === "light" ? <Moon /> : <Sun />}
         </li>
       </ul>
     </nav>

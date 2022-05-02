@@ -58,6 +58,10 @@ nav {
     background-color: var(--color-primary);
 }
 
+.navigation ul .btn-icon{
+    margin: 0 10px;
+}
+
 @media screen and (max-width: 420px) {
     .nav__list--static{
         gap: 0;
@@ -70,7 +74,12 @@ nav {
         border: none;
         font-weight: 500;
         font-size: 1.25rem;
+        background: transparent;
     }    
+    .nav__list--static button:hover{
+        color: var(--color-primary);
+        background: transparent;
+    }
 }
 
 

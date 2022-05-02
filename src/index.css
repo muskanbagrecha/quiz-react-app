@@ -4,16 +4,57 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css%22");
 @import url(https://unpkg.com/mockman-js@latest/dist/style.css);
 
-body,
-html {
-    scroll-behavior: smooth;
-    letter-spacing: 0.25px;
-    margin: 0;
-    padding: 0;
-}
-
 :root{
     --white: #fff;
+    --black: #000;
+    --pure-theme-color: rgb(247, 247, 247);
+
+    --color-primary: rgb(145, 128, 196);
+    --color-primary-values: 145, 128, 196;
+    
+    --color-white: rgb(247, 247, 247);
+    --color-white-values: 247, 247, 247;
+
+    --color-dark : rgb(11, 13, 23);
+    --color-dark-values: 11, 13, 23;
+
+    --color-secondary: rgb(156,163,175);
+    --color-secondary-values: 156,163,175;
+    
+    --color-complementary: rgb(11, 13, 23);
+    --color-complementary-values: 11, 13, 23;
+
+    --color-current: rgb(247, 247, 247);
+    --box-shadow: 0 12px 8px -4px rgba(0, 0, 0, 0.5);
+
+    --card-background: rgba(197, 185, 185, 0.1);
+    --card-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    --nav-color: #e9e5f3;
+    --toast-color: #323332;
+}
+
+[data-theme="dark"]{
+    --pure-theme-color: #000;
+
+    --color-primary: rgb(145, 128, 196);
+    --color-primary-values: 145, 128, 196;
+
+    --color-white: rgb(247, 247, 247);
+    --color-dark: rgb(11, 13, 23);
+    --color-secondary: rgb(156, 163, 175);
+
+    --color-complementary: rgb(247, 247, 247);
+    --color-complementary-values: 247, 247, 247;
+
+    --color-current: rgb(11, 13, 23);
+    --box-shadow: 0 14px 8px -2px rgba(255, 255, 255, 0.3);
+
+    --card-background: rgba(255, 255, 255, 0.2);
+    --card-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+    --nav-color: #484062;
+    --toast-color: #323332;
 }
 
 body::-webkit-scrollbar,
@@ -29,6 +70,15 @@ body::-webkit-scrollbar-thumb,
     background-color: rgba(var(--color-primary-values), 0.5);   ;
 }
 
+body,
+html {
+    scroll-behavior: smooth;
+    letter-spacing: 0.25px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-current);
+}
+
 .main-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -38,6 +88,7 @@ body::-webkit-scrollbar-thumb,
         "main"
         "footer";
     height: 100vh;
+    background-color: var(--color-current);
 }
 
 .navigation {
@@ -82,3 +133,10 @@ footer {
     width: 90%;
     max-width: 1580px;
 }
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
