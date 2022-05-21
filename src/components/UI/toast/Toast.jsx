@@ -22,7 +22,7 @@ export const Toast = () => {
       case "WARNING":
         return <Warning />;
       default:
-        return <></>;
+        return null;
     }
   };
 

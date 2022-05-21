@@ -5,6 +5,8 @@ import { QuizCard, Timer } from "./components";
 import "./SingleQuizPage.css";
 import spinner from "../../assets/spinner.svg";
 
+const RULES_LENGTH = 5;
+
 export const SingleQuizPage = () => {
   const { encodedToken } = useAuth();
   const {
@@ -35,10 +37,12 @@ export const SingleQuizPage = () => {
   }, [allQuizQuestionsResponse]);
 
   useEffect(() => {
-    if (allQuizQuestionsResponse && attemptedQuizQuestions.length !== 5) {
+    if (
+      allQuizQuestionsResponse &&
+      attemptedQuizQuestions.length !== RULES_LENGTH
+    ) {
       const currQuestionId =
         allQuizQuestionsResponse?.quiz?.mcqs[attemptedQuizQuestions.length]._id;
-      console.log(allQuizQuestionsResponse);
       if (!currQuestionId) {
         addWarningToast("Please restart the quiz!");
         navigate("/quizzes/All");
@@ -51,7 +55,7 @@ export const SingleQuizPage = () => {
           },
         });
       }
-    } else if (attemptedQuizQuestions.length === 5) {
+    } else if (attemptedQuizQuestions.length === RULES_LENGTH) {
       navigate(`/quiz/${currentQuiz._id}/result`);
     }
   }, [allQuizQuestionsResponse, attemptedQuizQuestions.length]);
@@ -67,7 +71,7 @@ export const SingleQuizPage = () => {
           <Timer quizId={currentQuiz} />
           <div className="question-number-label">{`Question: ${
             attemptedQuizQuestions.length + 1
-          }/5`}</div>
+          }/${RULES_LENGTH}`}</div>
           {currentQuestionResponse && (
             <QuizCard
               questionData={currentQuestionResponse}

@@ -14,8 +14,6 @@ export const ResultPage = () => {
 
   useEffect(() => {
     if (currentQuiz) {
-      console.log(currentQuiz);
-      console.log(attemptedQuizQuestions);
     } else {
       navigate("/quizzes/All");
       addWarningToast("Please attempt quiz again!");

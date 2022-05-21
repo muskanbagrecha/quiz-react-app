@@ -17,12 +17,10 @@ export const AuthProvider = ({ children }) => {
 
   const [authState, setAuthState] = useState({
     isAuthenticated: localStorage.getItem("user") ? true : false,
-    encodedToken: localStorage.getItem("token")
-      ? localStorage.getItem("token")
-      : null,
-    user: localStorage.getItem("user")
-      ? JSON.parse(localStorage.getItem("user"))
-      : null,
+    encodedToken:
+      localStorage.getItem("token") ?? localStorage.getItem("token"),
+    user:
+      localStorage.getItem("user") ?? JSON.parse(localStorage.getItem("user")),
   });
 
   useEffect(() => {

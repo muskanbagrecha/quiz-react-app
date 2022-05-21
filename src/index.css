@@ -4,6 +4,7 @@
 @import url("https://unpkg.com/mockman-js@latest/dist/style.css");
 
 :root{
+    --ccc: #ccc;
     --white: #fff;
     --black: #000;
     --pure-theme-color: rgb(247, 247, 247);
@@ -34,6 +35,7 @@
 }
 
 [data-theme="dark"]{
+    --ccc: #ccc;
     --pure-theme-color: #000;
 
     --color-primary: rgb(145, 128, 196);
@@ -149,7 +151,7 @@ footer {
 }
 
 .bordered-container{
-    border: 1px solid #ccc;
+    border: 1px solid var(--ccc);
     border-radius: 5px;
     padding: 1rem;
     margin: 1rem auto;
