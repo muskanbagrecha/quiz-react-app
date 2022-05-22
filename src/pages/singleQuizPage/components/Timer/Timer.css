@@ -1,0 +1,15 @@
+.timer__pie{
+position: relative;
+height: 100px;
+width: 100px;
+margin: 1rem auto;
+border-radius: 50%;
+}
+
+.timer__pie::before{
+position: absolute;
+content: "";
+border-radius: 50%;
+inset: 0;
+background: conic-gradient(var(--color-primary) var(--fill-value), rgb(227, 224, 224) 0);
+}

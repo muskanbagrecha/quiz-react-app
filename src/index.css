@@ -1,10 +1,10 @@
 @import url("https://fashgram-ui.netlify.app/lighttheme.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css%22");
-@import url(https://unpkg.com/mockman-js@latest/dist/style.css);
+@import url("https://unpkg.com/mockman-js@latest/dist/style.css");
 
 :root{
+    --ccc: #ccc;
     --white: #fff;
     --black: #000;
     --pure-theme-color: rgb(247, 247, 247);
@@ -35,12 +35,12 @@
 }
 
 [data-theme="dark"]{
+    --ccc: #ccc;
     --pure-theme-color: #000;
 
     --color-primary: rgb(145, 128, 196);
     --color-primary-values: 145, 128, 196;
 
-    --color-white: rgb(247, 247, 247);
     --color-dark: rgb(11, 13, 23);
     --color-secondary: rgb(156, 163, 175);
 
@@ -51,7 +51,6 @@
     --box-shadow: 0 14px 8px -2px rgba(255, 255, 255, 0.3);
 
     --card-background: rgba(255, 255, 255, 0.2);
-    --card-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
     --nav-color: #484062;
     --toast-color: #323332;
@@ -131,7 +130,7 @@ footer {
     justify-content: center;
     margin: 0 auto;
     width: 90%;
-    max-width: 1580px;
+    max-width: 1280px;
 }
 
 .flex-center{
@@ -140,3 +139,31 @@ footer {
     align-items: center;
 }
 
+.flex-col-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.margin-center{
+    margin: 0 auto;
+}
+
+.bordered-container{
+    border: 1px solid var(--ccc);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 40rem;
+}
+
+@media screen and (max-width: 780px) {
+    .sub-container{
+        margin-top: 4rem;
+    }
+    .bordered-container{
+        width: 25rem;
+        padding: 10px;
+    }
+}

@@ -18,7 +18,7 @@ export const quizzes = [
         question:
           "What is the name of the company that acquires Dunder Mifflin?",
         options: ["Sabre", "Provean", "Decovo", "Zonos"],
-        answer: "Sabre",
+        answer: 1,
       },
       {
         _id: uuid(),
@@ -29,13 +29,13 @@ export const quizzes = [
           "United Nations Blue",
           "Mustard Yellow",
         ],
-        answer: "Mustard Yellow",
+        answer: 4,
       },
       {
         _id: uuid(),
         question: "What is Meredith's last name?",
         options: ["Scott", "Vance", "Kapoor", "Palmer"],
-        answer: "Palmer",
+        answer: 4,
       },
       {
         _id: uuid(),
@@ -46,7 +46,7 @@ export const quizzes = [
           "The Scranton Convention Center",
           "The local Chili's restaurant",
         ],
-        answer: "The local Chili's restaurant",
+        answer: 4,
       },
       {
         _id: uuid(),
@@ -57,7 +57,7 @@ export const quizzes = [
           "Accounting",
           "Sales",
         ],
-        answer: "Quality Assurance",
+        answer: 2,
       },
     ],
     categoryName: "TV Shows",
@@ -67,7 +67,7 @@ export const quizzes = [
     title: "Friends",
     totalScore: 20,
     thumbnail:
-      "https://gabrielecaramellino.nova100.ilsole24ore.com/wp-content/uploads/sites/64/2017/07/friends.jpg",
+      "https://setmywed.com/blog/wp-content/uploads/2020/06/Friends.jpg",
     mcqs: [
       {
         _id: uuid(),
@@ -78,13 +78,13 @@ export const quizzes = [
           "Garry and Margaret",
           "Jack and Jill",
         ],
-        answer: "Jack and Judy",
+        answer: 1,
       },
       {
         _id: uuid(),
         question: "How many times was Ross legally divorced?",
         options: ["3", "4", "5", "6"],
-        answer: "3",
+        answer: 1,
       },
       {
         _id: uuid(),
@@ -96,27 +96,27 @@ export const quizzes = [
           "Bananas and custard",
           "Raisins and cream",
         ],
-        answer: "Raisins and cream",
+        answer: 4,
       },
       {
         _id: uuid(),
         question: "What job did Monica's older boyfriend Richard have?",
         options: ["Dentist", "Ophthalmologist", "Professor", "Stockbroker"],
-        answer: "Ophthalmologist",
+        answer: 2,
       },
       {
         _id: uuid(),
         question:
           "Who was briefly roommates with Australian dancer Janine Lacroix?",
         options: ["Rachael", "Ross", "Joey", "Chandler"],
-        answer: "Joey",
+        answer: 3,
       },
       {
         _id: uuid(),
         question:
           "Which of the following was not the name of one of Alice and Frank Jr.'s kids?",
         options: ["Leslie", "Ursula", "Chandler", "Frank Jr. Jr."],
-        answer: "Ursula",
+        answer: 2,
       },
     ],
     categoryName: "TV Shows",
@@ -132,19 +132,19 @@ export const quizzes = [
         _id: uuid(),
         question: "Which season Harvey is the Most Badass One",
         options: ["Season 1", "Season 2", "Season 6", "Every Season"],
-        answer: "Every Season",
+        answer: 4,
       },
       {
         _id: uuid(),
         question: "In which season does Mike was imprisoned",
         options: ["Season 3", "Season 5", "Season 7", "Season 4"],
-        answer: "Season 4",
+        answer: 4,
       },
       {
         _id: uuid(),
         question: "Harvey had what kind of emotional problems",
         options: ["Attachment Issues", "Panic Attack", "Trauma", "Stress"],
-        answer: "Attachment Issues",
+        answer: 1,
       },
     ],
     categoryName: "TV Shows",

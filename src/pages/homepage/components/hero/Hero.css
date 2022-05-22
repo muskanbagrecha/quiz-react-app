@@ -11,11 +11,11 @@
     background: url("../../../../assets/Images/hero/hero.webp") no-repeat center center;
 }
 
-.hero .btn{
+.hero .btn, .card-category-wrapper .btn {
     border: 2px solid transparent;
 }
 
-.hero .btn:hover {
+.hero .btn:hover, .card-category-wrapper .btn:hover {
     color: var(--color-light);
     background: transparent;
     border: 2px solid var(--color-dark);

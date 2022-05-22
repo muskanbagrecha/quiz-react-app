@@ -1,0 +1,34 @@
+.alert::before{
+    color: transparent;
+    margin: 0;
+}
+
+.alert{
+    padding: 1rem 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-dark);
+}
+
+.alert span{
+    margin-left: auto;
+}
+
+.alert-selected{
+    background: orange;
+}
+
+.card-quiz-mcq{
+    box-shadow: none;
+    padding: 1rem;
+    width: 30rem;
+    max-width: 30rem;
+    background: transparent;
+}
+
+.card-quiz-mcq ul{
+    padding: 0;
+}
+
+.card-quiz-mcq li{
+    cursor: pointer;
+}

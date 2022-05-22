@@ -1,11 +1,11 @@
-import Mockman from "mockman-js";
 import { AppRouter } from "./router/AppRouter";
-import { Footer, Navigation } from "./components/";
+import { Footer, Navigation, Toast } from "./components/";
 
 function App() {
   return (
     <div className="main-container">
       <Navigation />
+      <Toast />
       <AppRouter />
       <Footer />
     </div>
