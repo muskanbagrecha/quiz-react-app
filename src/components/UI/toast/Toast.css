@@ -22,7 +22,7 @@
 .toast {
   position: relative;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 1.5rem;
   padding: 10px 1rem;
   margin: 10px;
