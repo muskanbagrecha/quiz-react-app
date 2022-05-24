@@ -33,7 +33,7 @@ export const Navigation = () => {
             </span>
           ) : (
             <span className="avatar avatar-xs avatar-text">
-              {user?.firstName[0] + user?.lastName[0]}
+              {user?.firstName?.slice(0, 1) + user?.lastName?.slice(0, 1)}
             </span>
           )}
           <nav className="user--hover">

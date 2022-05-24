@@ -2,7 +2,7 @@ import { useState, useEffect, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "../../../../hooks/";
 import "./Timer.css";
-export const Timer = memo(({ quizId }) => {
+export const Timer = ({ quizId }) => {
   const INITIAL_TIMER_VALUE = 25;
   const [currentTime, setCurrentTime] = useState(INITIAL_TIMER_VALUE);
 
@@ -17,7 +17,6 @@ export const Timer = memo(({ quizId }) => {
       addWarningToast("5 seconds remaining!");
     } else {
       addInfoToast("Timer has expired!");
-
       navigate(`/quiz/${quizId}/result`);
     }
     return () => clearInterval(id);
@@ -31,4 +30,4 @@ export const Timer = memo(({ quizId }) => {
       }}
     ></div>
   );
-});
+};
